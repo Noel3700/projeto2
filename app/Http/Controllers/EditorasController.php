@@ -13,5 +13,6 @@ class EditorasController extends Controller
    	 return view('editoras.index',[
    	 	'editoras'=>$editoras
    	 ]);
+        
    }
 }
