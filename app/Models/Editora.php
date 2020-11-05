@@ -11,5 +11,9 @@ class Editora extends Model
      protected $primaryKey="id_editora";
 
     protected $table="editoras";
+    
+    public function livro(){
+     return $this->belongsTo('App\Models\livro', 'id_editora');        
+    }
 }
 
