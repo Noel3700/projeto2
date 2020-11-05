@@ -8,7 +8,12 @@ A minha APP
 @section('conteudo')
 <ul>
     @foreach($generos as $genero)
-<li>{{$genero->designacao}}</li>
+    <li>
+    <a href="{{route('generos.show',['id'=>$genero->id_genero])}}">
+    {{$genero->designacao}}
+    </a>
+    </li>
+
 @endforeach
     {{$generos->render()}}
 </ul>

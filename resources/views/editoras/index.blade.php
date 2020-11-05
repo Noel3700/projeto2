@@ -8,8 +8,13 @@ A minha APP
 @section('conteudo')
 <ul>
     @foreach($editoras as $editora)
-<li>{{$editora->nome}}</li>
+    <li>
+    <a href="{{route('editoras.show',['id'=>$editora->id_editora])}}">
+    {{$editora->nome}}
+    </a>
+    </li>
+
 @endforeach
     {{$editoras->render()}}
 </ul>
-´@endsection
+@endsection

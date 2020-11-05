@@ -19,7 +19,7 @@ public function show(Request $request){
     $idLivro=$request->id;
    // $livro= Livro::findOrFail($idLivro);
    // $livro=Livro::find($idLivro);
-    $livro = Livro::where('id_livro',$idLivro)->first();
+    $livro = Livro::where('id_livro',$idLivro)->with('genero')->first();
     return view('livros.show',[
         'livro'=>$livro
     ]);
