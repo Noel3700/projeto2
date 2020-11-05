@@ -26,3 +26,10 @@ Route::get('/generos','App\Http\Controllers\GenerosController@index')->name('gen
 Route::get('/livros/{id}/show','App\Http\Controllers\livrosController@show')->name('livros.show');
 
 Route::get('/autores/{id}/show','App\Http\Controllers\autoresController@show')->name('autores.show');
+
+Route::get('/generos/{id}/show','App\Http\Controllers\generosController@show')->name('generos.show');
+
+Route::get('/editoras/{id}/show','App\Http\Controllers\editorasController@show')->name('editoras.show');
+
+Route::get('/livros/{id}/show','App\Http\Controllers\livrosController@show')->name('livros.show');
+

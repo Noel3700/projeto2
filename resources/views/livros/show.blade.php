@@ -1,3 +1,11 @@
-ID:{{$livro->idl}}<br>
+ID:{{$livro->id_livro}}<br>
 Título:{{$livro->titulo}}<br>
 Idioma:{{$livro->idioma}}
+Paginas:{{$livro->total_paginas}}<br>
+Data:{{$livro->data_edicao}}<br>
+ISBN:{{$livro->isbn}}<br>
+Obseracoes:{{$livro->obseracoes}}<br>
+Imagem:{{$livro->imagem}}<br>
+Genero:{{$livro->id_genero}}<br>
+Autor:{{$livro->id_autor}}<br>
+Sinopse:{{$livro->sinopse}}

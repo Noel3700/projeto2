@@ -13,5 +13,13 @@ class GenerosController extends Controller
    	 return view('generos.index',[
    	 	'generos'=>$generos
    	 ]);
+    }
+        public function show(Request $request){
+       $idGenero=$request->id;
+        $genero = Genero::where('id_genero',$idGenero)->first();
+       return view('generos.show',[
+           'genero'=>$genero
+       ]);
+            
 }
 }
