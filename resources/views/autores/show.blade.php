@@ -3,12 +3,15 @@ Nome:{{$autor->nome}}<br>
 Nacionalidade:{{$autor->nacionalidade}}<br>
 Data:{{$autor->data}}
 
-if(count($livros->editoras))
-@foreach ($livros->editoras as $editora)
-<h3>{{$editora->nome}}</h3>
+ 
+
+
+@if(count($autor->livros))
+@foreach ($autor->livros as $livro)
+<h3>{{$livro->titulo}}</h3>
 @endforeach
 @else
 <div class="alert alert-danger" role="alert">
-Neste livro  nao há editora!
+Este autor nao tem livros!!!
 </div>
 @endif
