@@ -15,5 +15,15 @@ class Editora extends Model
     public function livro(){
      return $this->belongsTo('App\Models\livro', 'id_editora');        
     }
+    
+    public function livros(){
+     return $this->belongsToMany(
+        'App\Models\Livro',
+            'edicoes',//nome da tabela pivot
+            'id_editora',//fk de autores livros que relaciona com  livro
+            'id_livro'//fk de autores livros que relaciona com Autor
+        )->withTimestamps();
+         
+    }
 }
 
